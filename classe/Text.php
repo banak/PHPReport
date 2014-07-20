@@ -15,10 +15,11 @@ class Text
     var $_size;
     var $_policy;
    
-    public function __construct($text, $size, $policy='time')
+    public function __construct($text, $size, $policy='Times New Roman')
     {
-        $this->_name = Text::$typeName & Text::$NumName;
-        
+        $this->_name = Text::$typeName . Text::$NumName;
+        echo 'name : ' . $this->_name . '<br>';
+        Text::$NumName++;
         $this->_text = $text;
         $this->_size = $size;
         $this->_policy = $policy;
@@ -26,7 +27,7 @@ class Text
     
     public function draw()
     {
-        echo $this->_text;
+        echo '<span id="'.$this->_name.'">' . $this->_text . '</span>';
     }
 }
 

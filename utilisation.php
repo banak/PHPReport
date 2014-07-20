@@ -9,10 +9,14 @@
 include './classe/Text.php';
 
 
+require_once './pattern/header.php';
+
 echo 'Objet Text : <br>';
-$Text = new Text('My first Text', 12);
+$Text = new Text('My first Text ', 12);
 
 echo $Text->draw();
 
+$Text2 = new Text('My first Text', 12);
+echo $Text2->draw();
 
 ?>
