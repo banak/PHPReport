@@ -6,7 +6,4 @@
  * and open the template in the editor.
  */
 
-interface Object
-{
-    
-}
+define('CSSFILE', './css/styleObject.css');

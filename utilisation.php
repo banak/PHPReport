@@ -7,12 +7,16 @@
  */
 
 include './classe/Text.php';
+include './pattern/init.php';
 
+require_once './pattern/header.php';
 
 echo 'Objet Text : <br>';
-$Text = new Text('My first Text', 12);
+$Text = new Text('My first Text ', 18, 'Arial');
 
 echo $Text->draw();
 
+$Text2 = new Text('My second Text', 28, 'Comic Sans MS');
+echo $Text2->draw();
 
 ?>
