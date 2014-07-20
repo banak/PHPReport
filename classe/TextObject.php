@@ -9,7 +9,7 @@
 include_once 'Object.php';
 include_once './fonction/fonctionsGenerales.php';
 
-class Text implements Object
+class TextObject implements Object
 {
     public static $typeName = 'Txt';
     public static $NumName = 1;
@@ -20,8 +20,8 @@ class Text implements Object
    
     public function __construct($text, $size, $policy='Times New Roman')
     {
-        $this->_name = Text::$typeName . Text::$NumName;
-        Text::$NumName++;
+        $this->_name = TextObject::$typeName . TextObject::$NumName;
+        TextObject::$NumName++;
         $this->_text = $text;
         $this->_size = $size;
         $this->_policy = $policy;
