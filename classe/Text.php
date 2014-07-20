@@ -20,9 +20,7 @@ class Text implements Object
    
     public function __construct($text, $size, $policy='Times New Roman')
     {
-        echo '<pre>';
         $this->_name = Text::$typeName . Text::$NumName;
-        var_dump( 'name : ' . $this->_name );
         Text::$NumName++;
         $this->_text = $text;
         $this->_size = $size;
