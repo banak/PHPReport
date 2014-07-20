@@ -6,7 +6,10 @@
  * and open the template in the editor.
  */
 
-class Text
+include_once 'Object.php';
+include_once './fonction/fonctionsGenerales.php';
+
+class Text implements Object
 {
     public static $typeName = 'Txt';
     public static $NumName = 1;
@@ -17,17 +20,28 @@ class Text
    
     public function __construct($text, $size, $policy='Times New Roman')
     {
+        echo '<pre>';
         $this->_name = Text::$typeName . Text::$NumName;
-        echo 'name : ' . $this->_name . '<br>';
+        var_dump( 'name : ' . $this->_name );
         Text::$NumName++;
         $this->_text = $text;
         $this->_size = $size;
         $this->_policy = $policy;
+       ecrirefichier(CSSFILE, $this->cssConstruct());
     }
     
     public function draw()
     {
         echo '<span id="'.$this->_name.'">' . $this->_text . '</span>';
+    }
+    
+    public function cssConstruct()
+    {
+        $ret = '#' . $this->_name . '{';
+        $ret .= 'font-size: '.$this->_size.'px;';
+        $ret .= 'font-family: "' . $this->_policy.'";'; 
+        $ret .= '}';
+        return ($ret);
     }
 }
 

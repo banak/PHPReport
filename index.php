@@ -6,13 +6,14 @@
  * and open the template in the editor.
  */
 
+require_once './pattern/header.php';
 echo '<body>';
 
 echo 'Utilisation : <a href="./utilisation.php">utilisation</a>';
 
 echo '<br>Note perso<br>';
 
-echo 'Faut-il générer css ?';
+
 
 echo 'Etape 1<br>';
 echo 'Intégrer JPgraph<br>';

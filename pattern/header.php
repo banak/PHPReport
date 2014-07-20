@@ -7,6 +7,6 @@
  */
 echo '<head>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8" />';
-echo '<link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />';
+echo '<link rel="stylesheet" href="./css/styleObject.css" type="text/css" media="screen" />';
 echo '</head>';
 
