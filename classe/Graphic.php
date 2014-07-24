@@ -6,18 +6,9 @@
  * and open the template in the editor.
  */
 
-class graphic
-{
-    private $_data;
-    private $_type;
-            
-    function __construct($data, $type)
-    {
-        $this->_data = $data;
-        $this->_type = $type;
-    }
-         
-    
+interface graphic
+{          
+    function __construct($data);
 }
 
 ?>
