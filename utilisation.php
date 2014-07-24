@@ -7,6 +7,7 @@
  */
 
 include './classe/TextObject.php';
+include './classe/LinearGraph.php';
 include './pattern/init.php';
 require_once './pattern/header.php';
 
@@ -20,46 +21,16 @@ echo $Text2->draw();
 
 echo '<br><br>graphique linéaire: <br>';
 
-require_once ('./lib/jpgraph-3.0.7/src/jpgraph.php');
-require_once ('./lib/jpgraph-3.0.7/src/jpgraph_line.php');
-
-$datay1 = array(20,15,23,15);
-
-
-// Setup the graph
-$graph = new Graph(300,250);
-$graph->SetScale("textlin");
-
-//$theme_class=new UniversalTheme;
-
-//$graph->SetTheme($theme_class);
-$graph->img->SetAntiAliasing(false);
-$graph->title->Set('Filled Y-grid');
-$graph->SetBox(false);
-
-$graph->img->SetAntiAliasing();
-
-$graph->yaxis->HideZeroLabel();
-$graph->yaxis->HideLine(false);
-$graph->yaxis->HideTicks(false,false);
-
-$graph->xgrid->Show();
-$graph->xgrid->SetLineStyle("solid");
- 
-$graph->xaxis->SetTickLabels(array('A','B','C','D'));
-$graph->xgrid->SetColor('#E3E3E3');
-
-// Create the first line
-$p1 = new LinePlot($datay1);
-$graph->Add($p1);
-$p1->SetColor("#6495ED");
-$p1->SetLegend('Line 1');
-
-
-$graph->legend->SetFrameWeight(1);
-
-// Output line
-$graph->Stroke();
-
+$linearG = new LinearGraph(array(1,3,4,5,3,1));
+$MyData = new pData();  
+$MyData->addPoints(array(-4,VOID,VOID,12,8,3),"Probe 1");
+$MyData->addPoints(array(3,12,15,8,5,-5),"Probe 2");
+$MyData->addPoints(array(2,7,5,18,19,22),"Probe 3");
+$MyData->setSerieTicks("Probe 2",4);
+$MyData->setSerieWeight("Probe 3",2);
+$MyData->setAxisName(0,"Temperatures");
+$MyData->addPoints(array("Jan","Feb","Mar","Apr","May","Jun"),"Labels");
+$MyData->setSerieDescription("Labels","Months");
+$MyData->setAbscissa("Labels");
  
 ?>

@@ -13,10 +13,10 @@ class TextObject implements Object
 {
     public static $typeName = 'Txt';
     public static $NumName = 1;
-    var $_name;
-    var $_text;
-    var $_size;
-    var $_policy;
+    private $_name;
+    private $_text;
+    private $_size;
+    private $_policy;
    
     public function __construct($text, $size, $policy='Times New Roman')
     {

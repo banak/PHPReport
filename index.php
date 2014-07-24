@@ -16,8 +16,8 @@ echo '<br>Note perso<br>';
 
 
 echo 'Etape 1<br>';
-echo 'Intégrer JPgraph<br>';
-echo "faire la génération de l'image du graphique dans l'objet graphic voir mettrr les images dans un dossier.";
+echo 'Intégrer pChart<br>';
+echo 'Intégrer gridster<br>';
 echo "inclure la bonne librairie selon le type choisie.";
 echo 'Etape 2<br>';
 echo 'Faire une surcharge pour le choix des graphique à proposer en objet<br>';
