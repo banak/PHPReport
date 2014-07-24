@@ -30,7 +30,8 @@ class TextObject implements Object
     
     public function draw()
     {
-        echo '<span id="'.$this->_name.'">' . $this->_text . '</span>';
+        return '<span id="'.$this->_name.'">' . $this->_text . '</span>';
+        
     }
     
     public function cssConstruct()
